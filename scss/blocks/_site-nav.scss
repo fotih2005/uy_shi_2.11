@@ -1,0 +1,27 @@
+.site-nav {
+    margin-left: 80px
+}
+.site-nav__cards {
+    @include list-unstyled;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.site-nav__item {
+    &:not(:last-child){
+        margin-right: 40px;
+    }
+}
+.site-nav__item-link {
+    @include link-setting ($white);
+    transition: all 0.3s ease;
+    &:hover{
+        color: $Light-Coral
+    }
+}
+@include breakpoint-down (600px){
+    .site-nav__cards{
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}

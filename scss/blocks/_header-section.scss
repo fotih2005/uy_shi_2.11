@@ -1,0 +1,97 @@
+.header-section {
+    background-color: $header-bg;
+    padding: 70px 0 170px 0;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        display: inline-block;
+        position: absolute;
+        background-image: url(../../imges/disk-red.svg);
+        width: 200px;
+        height: 200px;
+        top: 420px;
+        left: calc(50% + 670px);
+        background-repeat: no-repeat;
+        content: '';
+    }
+}
+.header-section__head-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-section__content-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 130px;
+    justify-content: space-between;
+    color: $white;
+}
+.header-section__title {
+    font-size: 64px;
+}
+.header-section__text {
+    width: 720px;
+    font-size: 20px;
+    margin-top: 40px;
+    &::before{
+        display: block;
+        width: 50px;
+        height: 4px;
+        margin-bottom: 40px;
+        background-color: $Light-Coral;
+        content: '';
+    }
+}
+.header-section__button{
+    display: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+@include breakpoint-down (700px){
+    .header-section__content-wrapper{
+        display: block;
+        width: 457px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .header-section__text{
+        width: 457px;
+        &::before{
+            display: none;
+        }
+    }
+    .header-section {
+        &::after{
+            display: inline-block;
+            position: absolute;
+            background-image: url(../../imges/disk-red.svg);
+            width: 200px;
+            height: 200px;
+            top: 420px;
+            left: calc(50% + 250px);
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+}
+@include breakpoint-down(550px){
+    .site-nav{
+        display: none;
+    }
+    .header-section__text{
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@include breakpoint-down (450px){
+    .header-section__link{
+        display: none;
+    }
+    .header-section__button{
+        display: block;
+    }
+}

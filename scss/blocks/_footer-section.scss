@@ -1,0 +1,50 @@
+.footer-section {
+    padding: 48px 0 55px 0;
+    background-color: #002529;
+}
+.footer-section__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-section__nav{
+    margin: 0;
+    margin-top: 25px;
+}
+.footer-section__text {
+    width: 160px;
+    font-size: 15px;
+    color: rgb(196, 196, 196);
+}   
+.footer-section__messenger-cards {
+    @include list-unstyled;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.footer-section__messenger-item {
+    &:not(:last-child){
+        margin-right: 16px;
+    }
+}
+.footer-section__messenger-item-link {
+    @include link-setting (#fff);
+    &:hover{
+        color: $Light-Coral;
+    }
+}
+.footer-section__data{
+    color: $white;
+}
+@include breakpoint-down (600px){
+    .footer-section__wrapper{
+        display: block;
+        text-align: center;
+    }
+    .footer-section__messenger-cards{
+        justify-content: center;
+    }
+    .footer-section__text{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}

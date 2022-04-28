@@ -1,0 +1,23 @@
+.stated-section {
+    padding: 75px 0;
+    background-color: $Light-Coral;
+}
+.started-secion__content-wrapper {
+    display: flex;
+    align-items: center;
+}
+.started-section__title {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: $Midnight-Green;
+}
+@include breakpoint-down (700px){
+    .started-secion__content-wrapper{
+        display: block;
+        text-align: center;
+    }
+    .started-section__title {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,98 @@
+.hero-section {
+    padding: 140px 0;
+    position: relative;
+    background-color: $Deep-Jungle-Green;
+     &::before{
+            display: inline-block;
+            position: absolute;
+            background-image: url(../../imges/disk.svg);
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: calc(50% - 870px);
+            background-repeat: no-repeat;
+            content: '';   
+            }
+            // &::after{
+            //     display: inline-block;
+            //     position: absolute;
+            //     background-image: url(../../imges/clients-bg.svg);
+            //     width: 200px;
+            //     height: 200px;
+            //     top: 500;
+            //     left: calc(50% - 970px);
+            //     background-repeat: no-repeat;
+            //     content: ''; 
+            // }
+}
+.hero-section__title-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.hero-section__title {
+    font-size: 48px;
+    line-height: 48px;
+    margin: 0;
+    color: $white;
+}
+.hero--section__cards {
+    @include list-unstyled;
+    display: flex;
+    margin-right: -20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero-section__item {
+    width: 330px;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 75px;
+    padding: 35px 25px 55px 25px;
+    background-color: $header-bg;
+    border-radius: 5px;
+    text-align: center;
+}
+.hero-section__item:hover .hero-section__item-content-wrpper{
+    display: none;
+}
+.hero-section__item:hover .hero-section__item-hover-content-wrapper{
+    display: block;
+}
+.hero-section__item-user {
+    border-radius: 50%;
+}
+.hero-section__item-title {
+    color: #79C8C7;
+}
+.hero-section__item-text {
+    color: #fff;
+    font-style: italic;
+}
+.hero-section__item-plus {
+    position: absolute;
+    top: 257px;
+    left: 147px;
+}
+.hero-section__item-content-wrpper{
+    display: block;
+}
+.hero-section__item-hover-content-wrapper {
+    margin-top: 35px;
+    display: none;
+}
+.hero-section__item-hover-title {
+    margin: 0;
+    margin-bottom: 8px;
+    color: #79C8C7;
+}
+.hero-section__item-hover-text {
+    color: $white;
+}
+@include breakpoint-down (700px){
+    .hero-section__item {
+        width: 300px;
+    }
+    .hero-section__item-plus{
+        left: 120px;
+    }
+}
