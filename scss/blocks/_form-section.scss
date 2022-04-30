@@ -1,0 +1,146 @@
+::placeholder{
+    color: $white;
+}
+.form-section {
+    position: relative;
+    padding: 50px 0;
+    background-color: $header-bg;
+    color: $white;
+    &::before{
+        display: inline-block;
+        position: absolute;
+        background-image: url(../../imges/disk.svg);
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: calc(50% - 870px);
+        background-repeat: no-repeat;
+        content: '';   
+        }
+}
+.form-section__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-section__title {
+    font-size: 64px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+.form-section__text {
+    color: $Light-Coral;
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 32px;
+}
+.form-section__text-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.form-section__desc {
+    margin: 0;
+    margin-left: 50px;
+}
+.form-section__form {
+    display: block;
+    max-width: 540px;
+    width: 100%;
+}
+.form-section__input {
+    padding-bottom: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $white;
+    color: $white;
+}
+.form-section__email-input {
+    &:not(:focus):not(:placeholder-shown):invalid{
+        border-bottom: 1px solid $Light-Coral;
+        color: $Light-Coral;
+    }
+    padding-bottom: 15px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $white;
+    color: $white;
+}
+.form-section__email-text{
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: calc(50% + 10px);
+    font-size: 10px;
+    color: $Light-Coral;
+}
+.form-section__email-input:not(:focus):not(:placeholder-shown):invalid + .form-section__email-text{
+    display: block;
+}
+.form-section__messenge {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 25px;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    color: $white;
+}
+.form-section__email-input::placeholder{
+    color: $white;
+}
+.form-section__button{
+    display: block;
+    width: 123px;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 24px;
+    border: 1px solid $white;
+    font-size: 18px;
+    color: $white;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    &:hover{
+        background-color: $white;
+        color: #004047;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .form-section__wrapper{
+        display: block;
+    }
+    .form-section__content-wrapper{
+        display: block;
+        width: 100%;
+        margin-bottom: 100px;
+        text-align: center;
+    } 
+    .form-section__text-wrapper{
+        justify-content: center;
+    }
+    .form-section__form-wrapper{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .form-section__form{
+        width: 550px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 560px){
+    .form-section__form{
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .form-section__form{
+        width: 250px;
+    }
+}
