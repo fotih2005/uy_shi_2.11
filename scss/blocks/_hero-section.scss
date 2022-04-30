@@ -135,3 +135,15 @@
 .hero-section__item-hover-content-wrapper{
   transform: rotateY(360deg);
 }
+.hero-section__item-cards {
+    @include list-unstyled;
+    margin-top: 24px;
+    display: flex;
+    list-style: none;
+}
+.hero-section__item-card {
+    &:not(:last-child){
+        margin-right: 16px;
+    }
+
+}
